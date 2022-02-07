@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jQuery.js"></script>
+    <style>
+    body{
+    background: url("fon.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+    #top {
+        wifth: 100%;
+    }
+    #eyes {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 15px;
+    }
+    .down {
+        border-radius: 5px;
+        padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Georgia;
+    background-color: #C750BB;
+    color: white;
+    cursor: pointer;
+    border: none;
+    }
+    #deyes {
+        font-size: 15px;
+    }
+    #deye {
+        font-size: 25px;
+    }
+    #center {
+        position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            height: 40%;
+            width: 90%;
+            text-align: center;
+    }
+    #h img {
+        width: 250px;
+        border-radius: 20px;
+    }
+    #h {
+        cursor: pointer;
+    }
+    #hed {
+        margin-bottom: 50px;
+    }
+    #ise{
+        width: 75%;
+        height: 40px;
+        border-radius: 20px;
+        display: block;
+        position: relative;
+        float: left;
+        font-size: 30px;
+        padding-left: 10px;
+    }
+    #bse {
+        position: relative;
+        float: right;
+        display: block;
+        margin: 3px;
+    }
+    #bse button {
+        border-radius: 5px;
+        padding: 4px 8px;
+        height: 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: DIN Condensed;
+    background-color: yellow;
+    color: red;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    }
+    #bse img {
+        width: 40px;
+        border-radius: 5px;
+    }
+    #bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 50px;
+        background: rgba(225, 0, 0, .70);
+        text-align: center;
+    }
+    #infosait{
+        color: white;
+        font-family: Georgia;
+        padding: 5px;
+    }
+    #push {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100px;
+        display: none;
+        background: rgb(38, 235, 152);
+        text-align: center;
+        padding-top: 30px;
+    }
+    #cookok {
+        border-radius: 5px;
+        padding: 4px 8px;
+        height: 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: DIN Condensed;
+    background-color: #47B3FF;
+    color: black;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    }
+    </style>
+    <script>
+        $(document).ready(function(){
+            var w = $(window).width();
+            if(w < 500){
+                $("#bse button").hide();
+                $("#ise").css("height", "25px")
+            } else {
+                $("#bse img").hide();
+            }
+            $(window).resize(function(){
+                var w = $(window).width();
+            if(w < 500){
+                $("#bse button").hide();
+                $("#bse img").show();
+                $("#ise").css("height", "25px");
+            } else {
+                $("#bse button").show();
+                $("#bse img").hide();
+                $("#ise").css("height", "40px")
+            }
+            });
+            $("#push").fadeIn(1000);
+            $("#cookok").click(function(){
+                $("#push").fadeOut(1000);
+            });
+            $("#bse").click(function(){
+                var t = $("#ise").val();
+                t = escape(t);
+                document.location.href = "/search/search/?text=" + t;
+            });
+            $(".down").click(function(){
+                document.location.href = "https://programforeyes.000webhostapp.com/";
+            });
+            $("#ise").focus(function(){
+                $("#ise").css("background", "yellow");
+                $("#ise").css("color", "red");
+            });
+            $("#ise").blur(function(){
+                $("#ise").css("background", "white");
+                $("#ise").css("color", "black");
+            });
+            $('input').keydown(function(e) {
+    if(e.keyCode === 13) {
+        var t = $("#ise").val();
+                t = escape(t);
+                document.location.href = "/search/search/?text=" + t;
+    }
+  });
+  $("#h").click(function(){
+      document.location.href = "/search";
+  });
+        });
+    </script>
+  </head>
+  <body>
+    <div id="top">
+        <div id="eyes">
+            <button id="deyes" class="down">Скачать EYES</button>
+        </div>
+    </div>
+    <div id="center">
+        <div id="hed">
+            <span id="h"><img src="hed.png"/></span>
+        </div>
+        <div id="pans">
+            <input id="ise"/>
+            <div id="bse">
+            <button>Найти</button><img src="sea.png"/>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="infosait">
+            Поисковая система нового поколения<br/>
+            <span class="year">2020</span>
+            <span class="geo">Россия</span>
+        </div>
+    </div>
+    <div id="push">
+            <button id="cookok">Принять все cookies</button>
+    </div>
+  </body>
+</html>
