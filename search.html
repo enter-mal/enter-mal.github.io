@@ -8,10 +8,12 @@
       
     </style>
     <script>
+      $(document).ready(function(){
         var loc = document.location.href;
     var res;
     var t = loc.substring(loc.indexOf("=") + 1, loc.length);
     $("iframe").attr("src", "http://entermal.000webhostapp.com/search/?text=" + t);
+      });
     </script>
   </head>
   <body>
