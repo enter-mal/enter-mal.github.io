@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jQuery.js"></script>
+    <style>
+      
+    </style>
+    <script>
+        var loc = document.location.href;
+    var res;
+    var t = loc.substring(loc.indexOf("=") + 1, loc.length);
+    $("iframe").attr("src", "http://entermal.000webhostapp.com/search/?text=" + t);
+    </script>
+  </head>
+  <body>
+    <iframe></iframe>
+  </body>
+</html>
