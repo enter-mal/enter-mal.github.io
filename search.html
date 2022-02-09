@@ -5,14 +5,18 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="jQuery.js"></script>
     <style>
-      
+      iframe {
+      position: absolute;
+        width: 100%;
+        height: 100%;
+      }
     </style>
     <script>
       $(document).ready(function(){
         var loc = document.location.href;
     var res;
     var t = loc.substring(loc.indexOf("=") + 1, loc.length);
-    $("iframe").attr("src", "http://entermal.000webhostapp.com/search/?text=" + t);
+    $("iframe").attr("src", "https://entermal.000webhostapp.com/search/?text=" + t);
       });
     </script>
   </head>
