@@ -161,7 +161,7 @@
             $("#bse").click(function(){
                 var t = $("#ise").val();
                 t = escape(t);
-                document.location.href = "/search/search/?text=" + t;
+                document.location.href = "search.html?text=" + t;
             });
             $(".down").click(function(){
                 document.location.href = "https://programforeyes.000webhostapp.com/";
@@ -178,11 +178,11 @@
     if(e.keyCode === 13) {
         var t = $("#ise").val();
                 t = escape(t);
-                document.location.href = "/search/search/?text=" + t;
+                document.location.href = "search.html?text=" + t;
     }
   });
   $("#h").click(function(){
-      document.location.href = "/search";
+      document.location.href = "/";
   });
         });
     </script>
