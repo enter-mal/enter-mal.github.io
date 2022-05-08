@@ -186,8 +186,21 @@
   });
         });
     </script>
+    <script async src="https://moevideo.biz/embed/js/mvpt.min.js"></script>
   </head>
   <body>
+    <div id="adv"></div>
+<script>
+var moevideoQueue = moevideoQueue || [];
+moevideoQueue.push(function () {
+moevideo.ContentRoll({
+  "mode": "manual",
+  "el": "#adv",
+  "ignorePlayers": true
+});
+});
+
+</script>
     <div id="top">
         <div id="eyes">
             <button id="deyes" class="down">Скачать EYES</button>
